@@ -69,10 +69,9 @@ blockquote {
 .blog {
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
-	gap: 40px;
-	margin: 60px 40px;
+	column-gap: 40px;
+	margin: 60px 0;
 }
-
 
 header,
 p,
@@ -83,20 +82,98 @@ footer {
 
 .tip-vlevo {
 	grid-column: 1;
+	border-right: 2px solid var(--oranzova);
 }
 
 .tip-vpravo {
 	grid-column: 3;
+	border-left: 2px solid var(--oranzova);
 }
 
 blockquote,
 figure {
 	grid-column: 1 / -1;
-	display: block;
-	margin: auto;
 }
 
+figure img,
+div img {
+	display: flex;
+	width: 100%;
+ }
+
+ figure {
+	margin: 30px 0;
+ } 
+
+ p {
+	margin: 10px 0;
+ }
 
 .tip {
  	display: block;
+	background-color: var(--svetla);
+	height: max-content;
+	padding: 10px 15px;
+}
+
+.tip a {
+	color: var(--oranzova);
+}
+
+h1 {
+	color: var(--limetka);
+	font-size: 80px;
+	margin-bottom: 60px;
+}
+
+h2 {
+	color: var(--limetka);
+	font-size: 60px; 
+	margin: 20px 0 10px 0;
+}
+
+.meta {
+	margin: 10px 0;
+	color: var(--seda);
+}
+
+figcaption,
+footer {
+	color: var(--seda);
+	font-size: 15px;
+}
+
+footer {
+	margin-top: 30px;
+}
+
+footer a {
+	color: var(--seda);
+}
+
+blockquote {
+	color: var(--seda);
+	font-size: 30px;
+	text-align: center;
+	margin: 40px 0;
+}
+
+blockquote::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+blockquote::after {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: auto;
+	margin-top: 30px;
 }
